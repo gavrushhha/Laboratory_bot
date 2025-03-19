@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  bot:
+    build: .
+    container_name: telegram_bot
+    restart: always
+    volumes:
+      - ./bot_database.db:/app/bot_database.db  # Сохраняем базу данных вне контейнера
